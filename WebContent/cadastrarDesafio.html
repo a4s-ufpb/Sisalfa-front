@@ -10,7 +10,7 @@
 				$('#btnEnviar').click(function(event) {
 					
 					$.ajax({
-						url : 'http://localhost:8080/Sisalfa/addChallenge',
+						url : 'http://localhost:8080/sisalfa/addChallenge',
 						type : 'POST',	
 						data: JSON.stringify({					
     					palavra: $('#palavra').val(),
@@ -23,7 +23,7 @@
     					dataType : 'json',
     					success: function (result) {
     	    				alert("Desafio enviado com sucesso!");
-                			window.location = "http://localhost:8080/Sisalfa/sucesso.html";
+                			window.location = "http://localhost:8080/sisalfa/sucesso.html";
              			},
              			error: function () {
                  			alert("Erro ao enviar desafio");
@@ -34,7 +34,7 @@
 		</script>
 	<script>
 		$(document).ready(function(){
-			$.getJSON("http://localhost:8080/Sisalfa/getAllUsers", function(result){
+			$.getJSON("http://localhost:8080/sisalfa/getAllUsers", function(result){
 				$.each(result, function(indice, value){
 					$("#users").append('<option>' + value.id + '</option>'
 					);	
@@ -44,7 +44,7 @@
 	</script>
 	<script>
 		$(document).ready(function(){
-			$.getJSON("http://localhost:8080/Sisalfa/getAllContext", function(result){
+			$.getJSON("http://localhost:8080/sisalfa/getAllContext", function(result){
 				$.each(result, function(indice, value){
 					$("#contexts").append('<option>' + value.id + '</option>'
 					);	
