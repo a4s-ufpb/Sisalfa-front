@@ -8,7 +8,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	 <script>
 		$(document).ready(function(){
-			$.getJSON("http://sisalfa-back:8081/Sisalfa-back/getAllChallenge", function(result){
+			$.getJSON("http://localhost:8081/sisalfa-back/getAllChallenge", function(result){
 				$.each(result, function(indice, value){
 					$("#desafios").append('<tr> <td>' + value.id + '</td>' + 
 						'<td>' + value.palavra + '</td>' + 
