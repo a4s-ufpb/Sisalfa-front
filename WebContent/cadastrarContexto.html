@@ -9,7 +9,7 @@
 			$(document).ready(function() {
 				$('#btnEnviar').click(function(event) {
 					$.ajax({
-						url : 'http://localhost:8080/sisalfa/addContext',
+						url : 'http://sisalfa-back:8081/Sisalfa-back/addContext',
 						type : 'POST',	
 						data: JSON.stringify({					
 	    					nome: $('#nome').val(),
@@ -22,7 +22,7 @@
     					dataType : 'json',
     					success: function () {
     	    				alert("Contextos enviados com sucesso!");
-                			window.location = "http://localhost:8080/sisalfa/sucesso.html";
+                			window.location = "http://localhost:8082/Sisalfa-front/sucesso.html";
              			}
 					});
 				});	
@@ -30,7 +30,7 @@
 		</script>
 		<script>
 		$(document).ready(function(){
-			$.getJSON("http://localhost:8080/sisalfa/getAllUsers", function(result){
+			$.getJSON("http://sisalfa-back:8081/Sisalfa-back/getAllUsers", function(result){
 				$.each(result, function(indice, value){
 					$("#users").append('<option>' + value.id + '</option>'
 					);	
